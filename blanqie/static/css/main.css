@@ -14,7 +14,6 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: 'Comfortaa', cursive;
     background-color: #aef2f5;
 }
 
@@ -22,11 +21,19 @@ body {
     width: 100vw;
     height: 100vh;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #navbar {
-    height: fit-content;
+    position: fixed;
+    height: 5rem;
+    width: 100%;
+    z-index: 3;
+    font-family: 'Comfortaa', cursive;
+}
+
+#nav {
+    height: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -41,56 +48,13 @@ body {
 }
 
 #name {
-    font-size: 2em;
+    font-size: 1.5em;
     display: inline;
     text-align: center;
-    margin-left: 1.5em;
     color: white;
-    /* background-image: linear-gradient(orange, yellow); */
     border-radius: 1.4em;
     height: fit-content;
     width: fit-content;
-    /* padding: 0.5em; */
-}
-
-#navbar ul {
-    /* margin-right: 1em; */
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 0;
-    /* border-right: 5px solid black; */
-}
-
-#navbar ul li{
-    list-style: none;
-    display: inline;
-    margin: 1em 0.5em 0.5em 0.5em;
-    padding: 1em;
-
-}
-
-#navbar ul li a {
-    text-decoration: none;
-    color: white;
-
-}
-
-.menucontain {
-    /* border-top: 5px solid white;
-    border-bottom: 5px solid white; */
-    font-size: 3em;
-    color: white;
-    margin-top: auto;
-    margin-bottom: auto;
-    /* transform: rotate(-270deg); */
-}
-
-.bracketleft {
-    margin-left: auto;
-}
-
-.bracketright {
-    margin-right: auto;
 }
 
 .button {
@@ -98,7 +62,9 @@ body {
     border-radius: 1.4em;
     /* border-right: 5px solid white; */
     font-size: 1.4em;
-
+    text-decoration: none;
+    color: white;
+    padding: .8em;
 }
 
 .userbutton {
@@ -106,7 +72,30 @@ body {
     border-radius: 1.4em;
     /* border-right: 5px solid white; */
     font-size: 1.4em;
+    text-decoration: none;
+    color: white;
+    padding: .8em;
+
 }
+
+
+.linkscontainer {
+    /* border-top: 5px solid white;
+    border-bottom: 5px solid white; */
+    font-size: 3em;
+    color: white;
+    /* margin-top: auto;
+    margin-bottom: auto; */
+    /* transform: rotate(-270deg); */
+}
+
+/* .bracketleft {
+    margin-left: auto;
+}
+
+.bracketright {
+    margin-right: auto;
+} */
 
 #main {
     position: relative;
