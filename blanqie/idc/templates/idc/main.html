@@ -16,14 +16,15 @@
     <title>Blanqie!!!</title>
 </head>
 <body>
-    <h1>Navbar</h1>
-    <hr>
-    {% block content %}
+    <div id="container">
+        {% include 'idc/navbar.html'%}
+        <div id="main">
+            {% block content %}
 
-    {% endblock %}
-
-
-    <hr>
-    <h5>Our footer</h5>
+            {% endblock %}
+        </div>
+    </div>
+    <!-- <hr>
+    <h5>Our footer</h5> -->
 </body>
 </html>
