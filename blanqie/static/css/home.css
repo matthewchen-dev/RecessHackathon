@@ -1,3 +1,45 @@
-h1 {
-    color: blue;
+#home {
+    display: flex;
+    flex-flow: column nowrap;
+    /* border: 5px solid green; */
+    height: 82vh;
+    width: 100vw;
+    position: absolute;
+}
+
+#left {
+    width: 90%;
+    height: auto;
+    transform: rotate(13deg) translate(-11em, 3em);
+    opacity: 0.7;
+}
+
+#landing-text {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    /* border: 5px solid blue; */
+    height: 100%;
+}
+
+#large-text {
+    border: 5px solid black;   
+    /* font-size: 3.5em; */
+    /* justify-self: center;
+    text-align: center;
+    align-self: center;
+    margin-right: 2em; */
+    /* margin-bottom: 3em; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 00%); */
+}
+
+#landing-pic {
+    border: 5px solid orange;
+    
+}
+
+.large-text-heading {
+    display: inline;
+    color: teal;    
+    font-size: 5.5em;
+    line-height: 1.5em;
 }
