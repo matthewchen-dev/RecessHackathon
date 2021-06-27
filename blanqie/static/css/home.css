@@ -1,45 +1,105 @@
-#home {
+#wrapper {
     display: flex;
     flex-flow: column nowrap;
-    /* border: 5px solid green; */
-    height: 82vh;
-    width: 100vw;
-    position: absolute;
-}
-
-#left {
-    width: 90%;
-    height: auto;
-    transform: rotate(13deg) translate(-11em, 3em);
-    opacity: 0.7;
 }
 
 #landing-text {
-    display: grid;
-    grid-template-columns: 1fr 2.5fr;
+    display: flex;
+    flex-flow: row nowrap;
     /* border: 5px solid blue; */
-    height: 100%;
-}
-
-#large-text {
-    border: 5px solid black;   
-    /* font-size: 3.5em; */
-    /* justify-self: center;
-    text-align: center;
-    align-self: center;
-    margin-right: 2em; */
-    /* margin-bottom: 3em; */
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 00%); */
+    height: 85vh;
+    width: 100vw;
 }
 
 #landing-pic {
-    border: 5px solid orange;
-    
+    /* border: 5px solid black;   */
+    width: 50%;
+    z-index: 1;
+    /* height: 100%;  */
+}
+
+#left {
+    width: 120%;
+    transform: rotate(-13deg) translate(-3em, 10em) scaleX(-1.5) scaleY(1.4);
+    opacity: 0.7;
+    position: relative;
+    margin: 0;
+}
+
+#large-text {
+    /* border: 5px solid black;   */
+    width: 75%; 
+    height: fit-content;
+    margin: 10em 20em 3em 25em;
+    position: absolute;
+    z-index: 2;
 }
 
 .large-text-heading {
     display: inline;
-    color: teal;    
+    color: #c93292;    
     font-size: 5.5em;
     line-height: 1.5em;
+    align-self: center;
+    /* margin: 5em 3em 5em 3em; */
+}
+
+#testimonials {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100vh;
+    /* width: 100vw; */
+    scroll-snap-align: center;
+    /* margin-top: 3em; */
+    place-content: center center;
+}
+
+#productpic {
+    width: 40%;
+    margin: 3em 0em 0em 7em;
+    /* transform: scale(1); */
+    place-self: center center;
+}
+
+#producttext {
+    width: 60%;
+    margin-top: 3em;
+    font-size: 1.5em;
+    text-align: center;
+    place-self: center;
+    line-height: 3em;
+    color: beige;
+
+}
+
+#product {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100vh;
+    /* width: 100vw; */
+    background-color: rgb(255, 255, 255, 0.7);
+    scroll-snap-align: center;
+
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.8em;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
