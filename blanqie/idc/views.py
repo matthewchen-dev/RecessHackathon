@@ -31,6 +31,7 @@ def file_upload_view(request):
 
 all_entries = Doc.objects.last().upload
 all_entries.open(mode = 'r+')
+
 lines = all_entries.read()
 
 
@@ -42,4 +43,16 @@ print(r.get_ranked_phrases()) # To get keyword phrases ranked highest to lowest.
 print(r.get_ranked_phrases_with_scores())
 
 
+
+for word in r.get_ranked_phrases():
+    
+    if word in lines:
+        lines = lines.replace(word, '_'*len(word))
+        #all_entries.write(lines.replace(word, '_'*len(word)))
+
+print(lines)
+all_entries.seek(0)
+all_entries.truncate(0)
+all_entries.write(lines)
 all_entries.close()
+
