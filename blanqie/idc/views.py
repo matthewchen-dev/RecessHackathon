@@ -21,8 +21,9 @@ def test(request):
 def download(request):
     try:
         return FileResponse(open(Doc.objects.last().upload.path, 'rb'))
-    except FileNotFoundError:
+    except (FileNotFoundError, AttributeError) as e:
         return HttpResponse('<h1>You haven\'t put any text yet</h1>')
+
 
 
 class MainView(TemplateView):
