@@ -5,5 +5,6 @@ urlpatterns = [
     path('', views.home),
     path('learn/', views.learn),
     path('test/', views.test),
-    path('test/upload/', views.file_upload_view)
+    path('test/upload/', views.file_upload_view),
+    path('test/dl/', views.download)
 ]

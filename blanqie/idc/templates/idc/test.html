@@ -4,7 +4,14 @@
 <form action="upload/" method="POST" class="dropzone dz">
     {% csrf_token %}
     <div class="fallback">
-      <input name="file" type="file" />
+      <input name="file" type="file" multiple/>
+    </div>
+  </form>
+
+  <form action="dl/" method="POST" class="button">
+    {% csrf_token %}
+    <div class="fallback">
+      <button type="submit" name="btn"> See BLANQIE</button>
     </div>
   </form>
 {% endblock content %}
