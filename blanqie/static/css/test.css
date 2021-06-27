@@ -2,14 +2,26 @@ body {
     background-color: red;
 }
 
+#forms {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1em;
+    margin-top: 3em;
+}
 
 .dz {
     border: dashed !important; 
     border-color: #ccc !important;
     border-radius: 10px !important;
+    width: 24em;
+    place-self: center center;
 }
 
 .dz:hover {
     background-color: aliceblue !important;
+}
+
+.button {
+    place-self: center center;
 }
 

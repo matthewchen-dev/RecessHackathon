@@ -1,19 +1,27 @@
 {% extends 'idc/main.html' %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/css/test.css' %}">
+{% endblock %}
 
 {% block content %}
-<form action="upload/" method="POST" class="dropzone dz">
-    {% csrf_token %}
-    <div class="fallback">
-      <input name="file" type="file" multiple/>
-    </div>
-  </form>
+  <div id="forms">
+    <form action="upload/" method="POST" class="dropzone dz">
+        {% csrf_token %}
+        <div class="fallback">
+          <input name="file" type="file" multiple/>
+        </div>
+      </form>
 
-  <form action="dl/" method="POST" class="button">
-    {% csrf_token %}
-    <div class="fallback">
-      <button type="submit" name="btn"> See BLANQIE</button>
-    </div>
-  </form>
+      <form action="dl/" method="POST" class="button">
+        {% csrf_token %}
+        <div class="fallback">
+          <button type="submit" name="btn"> See BLANQIE</button>
+        </div>
+      </form>
+  </div>
 
   <h1>{{lines|linebreaks}}</h1>
 {% endblock content %}
