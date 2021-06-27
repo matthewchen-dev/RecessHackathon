@@ -20,7 +20,8 @@ def test(request):
 
 def download(request):
     try:
-        return FileResponse(open(Doc.objects.last().upload.path, 'rb'))
+        lines = str(open(Doc.objects.last().upload.path, 'r').read())
+        return render(request, 'idc/test.html', {'lines': lines})
     except (FileNotFoundError, AttributeError) as e:
         return HttpResponse('<h1>You haven\'t put any text yet</h1>')
 
