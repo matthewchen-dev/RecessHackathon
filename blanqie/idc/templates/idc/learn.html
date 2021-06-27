@@ -1,8 +1,24 @@
 {% extends 'idc/main.html' %}
 {% load static %}
 
-{% block content %}
-    <link rel="stylesheet" type="text/css" href="{% static '/css/learn.css'%}">
-    <h1>learn</h1>
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/css/learn.css' %}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css%22%3E">
 {% endblock %}
 
+{% block content %}
+    <div id="workbox">
+        <h1>How it works...</h1>
+        <ul id="workbox-liststyle">
+            <li>Prepare a text file with content you want to be tested on</li>
+            <li>Go to the Test tab</li>
+            <li>Click on upload the file area to choose a file</li>
+            <li>Select the file you prepared</li>
+            <li>Click on the 'See BLANQIE' button</li>
+            <li>The context from the text file will appear on the page with randomized words blanked out</li>
+            <li>You can start testing your knowledge!</li>
+        </ul>
+        <p>**NOTE: You must attach a text file or the program will not work. If you press the 'See BLANQIE' button without attaching a file then you will get an error </p>
+    </div>
+{% endblock %}

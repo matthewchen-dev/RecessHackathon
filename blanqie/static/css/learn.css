@@ -1,3 +1,44 @@
-h1 {
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap%27');
+
+#workbox {
+    width: 1100px;
+    height: fit-content;
+    border: 2px solid beige;
+    border-radius: 25px;
+    padding: 20px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#workbox h1{
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+
+#workbox-liststyle{
+    width: 1000px;
+    height: fit-content;
+    font-family: 'Comfortaa', cursive;
+    list-style: none;
+}
+
+li::before{
+    color: white;
+    content: "\25B7";
+    margin-right: 10px;
+}
+
+li{
+    padding: 10px 0px;
+    font-size: 20px;
+    color: rgb(243, 108, 243);
+}
+
+p{
+    font-family: 'Comfortaa', cursive;
+    margin-left: 15px; 
+    margin-right: 50px;
+    font-weight: bold;
+    font-style: italic;
+    color: thistle;
 }
