@@ -29,6 +29,7 @@ def file_upload_view(request):
         return HttpResponse('upload')
     return JsonResponse({'post': 'false'})
 
+
 all_entries = Doc.objects.last().upload
 all_entries.open(mode = 'r+')
 
